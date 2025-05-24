@@ -42,7 +42,7 @@ Acesse: https://console.firebase.google.com
 - No menu lateral, vá em Configurações do Projeto > Suas credenciais Web.
 
 
-### 4. Atualize o arquivo .firebase na pasta 'src' do projeto
+### 4. Atualize o arquivo firebase.js na pasta 'src' do projeto
 
 Preencha com suas credenciais Firebase:
 
@@ -54,7 +54,19 @@ storageBucket: "SEU_PROJETO.appspot.com",
 messagingSenderId: "NUMERO",
 appId: "SEU_APP_ID"
 ```
-### 5. Configure dados no Firestore
+
+### 6. Execute o projeto e cadastre um usuário
+
+```bash
+npm start
+```
+Acesse em: http://localhost:3000
+
+Siga as instruções da página para criar um novo cadastro.
+
+### 5. Configure dados do usuário cadastrado no Firestore
+
+Após registrar um usuário
 
 No console do Firestore, crie manualmente:
 
@@ -72,14 +84,6 @@ No console do Firestore, crie manualmente:
 }
 ```
 Nota: O UID pode ser obtido após o login no Firebase Authentication.
-
-### 6. Execute o projeto
-
-```bash
-npm start
-```
-
-Acesse em: http://localhost:3000
 
 ---
 
