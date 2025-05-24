@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# 💻 DevProfile Lite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DevProfile Lite é um protótipo simples de autenticação e visualização de perfil feito com **React.js** e **Firebase**. O objetivo é permitir que usuários se cadastrem, façam login e visualizem informações básicas do seu perfil armazenadas no **Cloud Firestore**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologias Utilizadas
 
-### `npm start`
+- **React.js** – Biblioteca JavaScript para criação de interfaces.
+- **React Router DOM** – Gerenciamento de rotas na aplicação.
+- **Firebase Authentication** – Sistema de autenticação de usuários com email e senha.
+- **Firebase Firestore** – Banco de dados NoSQL para armazenamento dos perfis.
+- **Tailwind CSS** – Framework de CSS utilitário para estilização responsiva e moderna.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Como configurar e rodar localmente
 
-### `npm test`
+### 1. Clone o repositório
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/Gabuka/devprofile-lite
+cd devprofile-lite
+```
 
-### `npm run build`
+### 2. Instale as dependências
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Configure o Firebase
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Acesse: https://console.firebase.google.com
 
-### `npm run eject`
+- Crie um novo projeto.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Habilite Authentication > Email/Senha.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Ative o Firestore Database.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- No menu lateral, vá em Configurações do Projeto > Suas credenciais Web.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### 4. Crie um arquivo .env na raiz do projeto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Preencha com suas credenciais Firebase:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+VITE_FIREBASE_API_KEY=SUA_CHAVE_API
+VITE_FIREBASE_AUTH_DOMAIN=SEU_PROJETO.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=SEU_PROJETO
+VITE_FIREBASE_STORAGE_BUCKET=SEU_PROJETO.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=NUMERO
+VITE_FIREBASE_APP_ID=SEU_APP_ID
+```
+### 5. Configure dados no Firestore
 
-### Code Splitting
+No console do Firestore, crie manualmente:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Coleção: userProfiles
 
-### Analyzing the Bundle Size
+- Documento: <UID do usuário autenticado>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Campos:
 
-### Making a Progressive Web App
+```bash
+{
+  "nomeCompleto": "Seu nome",
+  "bioCurta": "Uma breve descrição",
+  "linkPortfolio": "https://seuportfolio.com"
+}
+```
+Nota: O UID pode ser obtido após o login no Firebase Authentication.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 6. Execute o projeto
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Acesse em: http://localhost:3000
 
-### Deployment
+## 📂 Estrutura do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+src/
+├── components/
+│   ├── Navbar.jsx
+│   ├── ProtectedRoute.jsx
+├── pages/
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   ├── Profile.jsx
+├── services/
+│   ├── firebaseConfig.js
+├── App.jsx
+└── main.jsx
+```
 
-### `npm run build` fails to minify
+## 📌 Funcionalidades
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ✅ Cadastro com email e senha
+
+- ✅ Login e logout
+
+- ✅ Visualização de perfil com dados do Firestore
+
+- ✅ Rotas protegidas para usuários autenticados
+
+- ✅ Interface responsiva com Tailwind CSS
