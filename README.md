@@ -42,17 +42,17 @@ Acesse: https://console.firebase.google.com
 - No menu lateral, vá em Configurações do Projeto > Suas credenciais Web.
 
 
-### 4. Crie um arquivo .env na raiz do projeto
+### 4. Atualize o arquivo .firebase na pasta 'src' do projeto
 
 Preencha com suas credenciais Firebase:
 
 ```bash
-VITE_FIREBASE_API_KEY=SUA_CHAVE_API
-VITE_FIREBASE_AUTH_DOMAIN=SEU_PROJETO.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=SEU_PROJETO
-VITE_FIREBASE_STORAGE_BUCKET=SEU_PROJETO.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=NUMERO
-VITE_FIREBASE_APP_ID=SEU_APP_ID
+apiKey: "SUA_CHAVE_API",
+authDomain: "SEU_PROJETO.firebaseapp.com",
+projectId: "dSEU_PROJETO",
+storageBucket: "SEU_PROJETO.appspot.com",
+messagingSenderId: "NUMERO",
+appId: "SEU_APP_ID"
 ```
 ### 5. Configure dados no Firestore
 
@@ -88,16 +88,14 @@ Acesse em: http://localhost:3000
 ```bash
 src/
 ├── components/
-│   ├── Navbar.jsx
-│   ├── ProtectedRoute.jsx
+│   ├── ProtectedRoute.js
 ├── pages/
-│   ├── Login.jsx
-│   ├── Register.jsx
-│   ├── Profile.jsx
-├── services/
-│   ├── firebaseConfig.js
-├── App.jsx
-└── main.jsx
+│   ├── Login.js
+│   ├── Cadastro.js
+│   ├── Perfil.js
+│   firebase.js
+│   firebaseErrorMessages.js
+├── App.js
 ```
 
 ---
