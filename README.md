@@ -81,6 +81,8 @@ npm start
 
 Acesse em: http://localhost:3000
 
+---
+
 ## 📂 Estrutura do Projeto
 
 ```bash
@@ -97,6 +99,8 @@ src/
 ├── App.jsx
 └── main.jsx
 ```
+
+---
 
 ## 📌 Funcionalidades
 
