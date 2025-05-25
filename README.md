@@ -91,6 +91,8 @@ No console do Firestore, crie manualmente:
 ```
 Nota: O UID pode ser obtido após o login no Firebase Authentication.
 
+Depois disso, quando esse usuário fizer login, seus dados serão importados e exibidos na tela do Perfil.
+
 ---
 
 ## 📂 Estrutura do Projeto
