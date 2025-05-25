@@ -101,8 +101,8 @@ src/
 │   ├── Login.js
 │   ├── Cadastro.js
 │   ├── Perfil.js
-│   firebase.js
-│   firebaseErrorMessages.js
+├── firebase.js
+├── firebaseErrorMessages.js
 ├── App.js
 ```
 
