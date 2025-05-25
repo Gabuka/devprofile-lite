@@ -43,7 +43,9 @@ Acesse: https://console.firebase.google.com
 
 - Adicione um novo app ao projeto: Visão geral do projeto > Adicionar app (Web).
 
-- De um nome ao app e registre. Após isso, copie os dados do SDK para o próximo passo.
+- De um nome ao app e registre. 
+
+- Após isso, copie os dados do SDK para o próximo passo.
 
 
 ### 4. Atualize o arquivo 'src/firebase.js'
