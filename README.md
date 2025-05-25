@@ -2,6 +2,8 @@
 
 DevProfile Lite é um protótipo simples de autenticação e visualização de perfil feito com **React.js** e **Firebase**. O objetivo é permitir que usuários se cadastrem, façam login e visualizem informações básicas do seu perfil armazenadas no **Cloud Firestore**.
 
+Link do projeto hospedado no Vercel: https://devprofile-lite.vercel.app/
+
 ---
 
 ## 🚀 Tecnologias Utilizadas
