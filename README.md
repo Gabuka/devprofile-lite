@@ -41,8 +41,12 @@ Acesse: https://console.firebase.google.com
 
 - No menu lateral, vá em Configurações do Projeto > Suas credenciais Web.
 
+- Adicione um novo app ao projeto: Visão geral do projeto > Adicionar app (Web).
 
-### 4. Atualize o arquivo firebase.js na pasta 'src' do projeto
+- De um nome ao app e registre. Após isso, copie os dados do SDK para o próximo passo.
+
+
+### 4. Atualize o arquivo 'src/firebase.js'
 
 Preencha com suas credenciais Firebase:
 
@@ -55,7 +59,7 @@ messagingSenderId: "NUMERO",
 appId: "SEU_APP_ID"
 ```
 
-### 6. Execute o projeto e cadastre um usuário
+### 5. Execute o projeto e cadastre um usuário
 
 ```bash
 npm start
@@ -64,7 +68,7 @@ Acesse em: http://localhost:3000
 
 Siga as instruções da página para criar um novo cadastro.
 
-### 5. Configure dados do usuário cadastrado no Firestore
+### 6. Configure dados do usuário cadastrado no Firestore
 
 Após registrar um usuário
 
